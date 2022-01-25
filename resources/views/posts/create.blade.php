@@ -8,8 +8,8 @@
     </head>
     <body>
         <h1>Blog Name</h1>
-        <div class='posts'>
-            @foreach($posts as $post)
+        <from action="/posts" method="POST">
+            @csrf
                 <div class='post'>
                     <h2 class='title'>
                         <a href="/posts/{{ $post->id }}">{{ $post->title }}</a>
